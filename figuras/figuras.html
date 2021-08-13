@@ -7,8 +7,29 @@
     <title>Figuras Geométricas</title>
 </head>
 <body>
-    <h1>Figuras Geométricas</h1>
+    <header>
+        <h1>Figuras Geométricas</h1>
+    </header>
 
+    <main>
+        <section clas="square">
+            <h2 class="square__title">Área y Perímetro del Cuadrado <samp></samp></h2>
+            <form class="square__form" action="">
+                <label for="InputSquare" class="square__form__label">
+                    Escriba cuanto mide uno de los lados:
+                </label>
+                <input id="InputSquare" type="number" class="square__form__input">
+                <button type="button" onclick="calcularPerimetroCuadrado()" class="square__form__button">
+                    Calcular Perímetro.
+                </button>
+                <button type="button" onclick="calcularAreaCuadrado()" class="square__form__button">
+                    Calcular Área.
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
 
     <script src="./figuras.js"></script>
 </body>
