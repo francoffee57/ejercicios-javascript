@@ -27,11 +27,15 @@ body{
 .header{
 	width: 100%;
 	height: 164px;
+	position: relative;
 	background-color: var(--yellow);
 }
 .header__container{
 	width: 80%;
 	height: 72px;
+	position: relative;
+	z-index: 10;
+	margin-top: 8px;
 	text-align: center;
 	background-color: var(--white);
 }
@@ -45,4 +49,74 @@ body{
 	font-weight: normal;
 	font-size: 12px;
 	line-height: 12px;
+}
+/* Figuras del header */
+.header--figure--triangle{
+	height: 100%;
+	width: 60%;	
+	position: absolute;
+}
+.triangle--right{
+	left: 0;
+	background-color: var(--blue);
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.triangle--left{
+	right: 0;
+	background-color: var(--purple);
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+	transform:rotate(180deg);
+}
+.header--circle-right, .header--circle-left{
+	position: absolute;
+	z-index: 20;
+	border-radius: 50%;
+}
+.header--circle-right{
+	
+	width: 1.8em;
+	height: 1.8em;
+	left: 9%;
+	top: 14%;
+	background-color: var(--yellow);
+	box-shadow: -14px -14px 0 6px var(--purple);
+}
+.header--circle-left{
+	width: 2.2em;
+	height: 2.2em;
+	right: 6%;
+	bottom: 12%;
+	background-color: var(--purple);
+	box-shadow: 0 0 0 6px var(--yellow);
+}
+.header--triangle, 
+.header--triangle--shadow{
+	position: absolute;
+	width: 2.3em;
+	height: 2em;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.header--triangle{
+	right: 23%;
+	top: 5px;
+	z-index: 10;
+	background-color: var(--blue);
+}
+.header--triangle--shadow{
+	right: calc(23% - 10px);
+	top: 10px;
+	background-color: var(--purple);
+}
+
+.header--rhombus{
+	position: absolute;
+	width: 1.3em;
+	height: 1.3em;
+	z-index: 20;
+	bottom: -8px;
+	left: -9px;
+	transform:rotate(45deg);
+	background-color: var(--blue);
+	border: 4px solid var(--yellow);
+	box-shadow: 0 0 0 4px var(--purple);
 }

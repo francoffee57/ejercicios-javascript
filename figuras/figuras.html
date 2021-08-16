@@ -12,73 +12,80 @@
 </head>
 <body>
     <header class="header">
+        <div class="header--figure--triangle triangle--right" ></div>
+        <div class="header--circle-right"></div>
+        <div class="header--triangle"></div>
+        <div class="header--triangle--shadow"></div>
         <div class="header__container">
             <h1 class="header__title"><span class="header__title--little">Calculadora</span> Figuras Geométricas</h1>
+            <div class="header--rhombus"></div>
         </div>
+        <div class="header--figure--triangle triangle--left"></div>
+        <div class="header--circle-left"></div>
     </header>
     
     <main>
-        <section clas="square">
-            <h2 class="square__title">Área y Perímetro del Cuadrado <samp></samp></h2>
-            <form class="square__form" action="">
-                <label for="InputSquare" class="square__form__label">
+        <section clas="figure">
+            <h2 class="figure__title">Área y Perímetro del Cuadrado <samp></samp></h2>
+            <form class="figure__form" action="">
+                <label for="InputSquare" class="figure__form__label">
                     Escriba cuanto mide uno de los lados:
                 </label>
-                <input id="InputSquare" type="number" class="square__form__input">
-                <button type="button" onclick="calcularPerimetroCuadrado()" class="square__form__button">
+                <input id="InputSquare" type="number" class="figure__form__input">
+                <button type="button" onclick="calcularPerimetroCuadrado()" class="figure__form__button">
                     Calcular Perímetro.
                 </button>
-                <button type="button" onclick="calcularAreaCuadrado()" class="square__form__button">
+                <button type="button" onclick="calcularAreaCuadrado()" class="figure__form__button">
                     Calcular Área.
                 </button>
                 <p id="RestSquare">R: </p>
             </form>
         </section>
    
-        <section clas="triangle">
-            <h2 class="triangle__title">Área y Perímetro del Triángulo <samp></samp></h2>
-            <form class="triangle__form" action="">
-                <label for="InputTriangleL1" class="triangle__form__label">
+        <section clas="figure">
+            <h2 class="figure__title">Área y Perímetro del Triángulo <samp></samp></h2>
+            <form class="figure__form" action="">
+                <label for="InputTriangleL1" class="figure__form__label">
                     Escriba cuanto mide uno de los lados:
                 </label>
-                <input id="InputTriangleL1" type="number" class="triangle__form__input">
+                <input id="InputTriangleL1" type="number" class="figure__form__input">
 
-                <label for="InputTriangleL2" class="triangle__form__label">
+                <label for="InputTriangleL2" class="figure__form__label">
                     Escriba cuanto mide otro de sus lados:
                 </label>
-                <input id="InputTriangleL2" type="number" class="triangle__form__input">
+                <input id="InputTriangleL2" type="number" class="figure__form__input">
                 
-                <label for="InputTriangleBase" class="triangle__form__label">
+                <label for="InputTriangleBase" class="figure__form__label">
                     Escriba cuanto mide la base:
                 </label>
-                <input id="InputTriangleBase" type="number" class="triangle__form__input">
+                <input id="InputTriangleBase" type="number" class="figure__form__input">
                 
-                <label for="InputTriangleHeight" class="triangle__form__label">
+                <label for="InputTriangleHeight" class="figure__form__label">
                     Escriba cuanto mide la altura:
                 </label>
-                <input id="InputTriangleHeight" type="number" class="triangle__form__input">
+                <input id="InputTriangleHeight" type="number" class="figure__form__input">
                 
-                <button type="button" onclick="calcularPerimetroTriangulo()" class="triangle__form__button">
+                <button type="button" onclick="calcularPerimetroTriangulo()" class="figure__form__button">
                     Calcular Perímetro.
                 </button>
-                <button type="button" onclick="calcularAreaTriangulo()" class="triangle__form__button">
+                <button type="button" onclick="calcularAreaTriangulo()" class="figure__form__button">
                     Calcular Área.
                 </button>
                 <p id="RestTriangle">R: </p>
             </form>
         </section>
 
-        <section clas="circle">
-            <h2 class="circle__title">Área y Perímetro del Círculo<samp></samp></h2>
-            <form class="circle__form" action="">
-                <label for="InputCircle" class="circle__form__label">
+        <section clas="figure">
+            <h2 class="figure__title">Área y Perímetro del Círculo<samp></samp></h2>
+            <form class="figure__form" action="">
+                <label for="InputCircle" class="figure__form__label">
                     Escriba cuanto mide el radio:
                 </label>
-                <input id="InputCircle" type="number" class="circle__form__input">
-                <button type="button" onclick="calcularPerimetrocirculo()" class="circle__form__button">
+                <input id="InputCircle" type="number" class="figure__form__input">
+                <button type="button" onclick="calcularPerimetrocirculo()" class="figure__form__button">
                     Calcular Perímetro.
                 </button>
-                <button type="button" onclick="calcularAreacirculo()" class="circle__form__button">
+                <button type="button" onclick="calcularAreacirculo()" class="figure__form__button">
                     Calcular Área.
                 </button>
                 <p id="RestCircle">R: </p>
