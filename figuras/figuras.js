@@ -35,14 +35,17 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputSquare")
     const value = input.value
 
-    alert( perimeterSquare(value) + "unidades")
+    const restSquare = document.getElementById("RestSquare")
+    restSquare.innerText = perimeterSquare(value) + "unidades"
 }
 function calcularAreaCuadrado(){
     const input = document.getElementById("InputSquare")
     const value = input.value
 
-    alert( ariaSquare(value) + "unidades^2")
+    const restSquare = document.getElementById("RestSquare")
+    restSquare.innerText = ariaSquare(value) + "unidades^2"
 }
+
 //Tríangulo
 function calcularPerimetroTriangulo(){
     const input1 = document.getElementById("InputTriangleL1")
@@ -54,7 +57,8 @@ function calcularPerimetroTriangulo(){
     const input3 = document.getElementById("InputTriangleBase")
     const base = parseFloat(input3.value)
 
-    alert( perimeterTriangle(l1, l2, base) + "unidades")
+    const restTriangle = document.getElementById("RestTriangle")
+    restTriangle.innerText = perimeterTriangle(l1, l2, base) + "unidades"
 }
 function calcularAreaTriangulo(){
     const input3 = document.getElementById("InputTriangleBase")
@@ -62,18 +66,22 @@ function calcularAreaTriangulo(){
 
     const input4 = document.getElementById("InputTriangleHeight")
     const altura = parseFloat(input4.value)
-    alert( areaTriangle(base, altura) + "unidades^2")
+
+    const restTriangle = document.getElementById("RestTriangle")
+    restTriangle.innerText = areaTriangle(base, altura) + "unidades^2"
 }
 //Círculo
 function calcularPerimetrocirculo(){
     const input = document.getElementById("InputCircle")
     const value = input.value
 
-    alert( perimeterCircle(value) + "unidades")
+    const RestCircle = document.getElementById("RestCircle")
+    RestCircle.innerText = perimeterCircle(value) + "unidades"
 }
 function calcularAreacirculo(){
     const input = document.getElementById("InputCircle")
     const value = input.value
 
-    alert( ariaCircle(value) + "unidades^2")
+    const RestCircle = document.getElementById("RestCircle")
+    RestCircle.innerText = ariaCircle(value) + "unidades^2"
 }

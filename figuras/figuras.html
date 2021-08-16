@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./figuras.css">
     <title>Figuras Geométricas</title>
 </head>
 <body>
     <header>
         <h1>Figuras Geométricas</h1>
     </header>
-
+    
     <main>
         <section clas="square">
             <h2 class="square__title">Área y Perímetro del Cuadrado <samp></samp></h2>
@@ -25,9 +26,10 @@
                 <button type="button" onclick="calcularAreaCuadrado()" class="square__form__button">
                     Calcular Área.
                 </button>
+                <p id="RestSquare">R: </p>
             </form>
         </section>
-
+   
         <section clas="triangle">
             <h2 class="triangle__title">Área y Perímetro del Triángulo <samp></samp></h2>
             <form class="triangle__form" action="">
@@ -57,6 +59,7 @@
                 <button type="button" onclick="calcularAreaTriangulo()" class="triangle__form__button">
                     Calcular Área.
                 </button>
+                <p id="RestTriangle">R: </p>
             </form>
         </section>
 
@@ -73,6 +76,7 @@
                 <button type="button" onclick="calcularAreacirculo()" class="circle__form__button">
                     Calcular Área.
                 </button>
+                <p id="RestCircle">R: </p>
             </form>
         </section>
     </main>
