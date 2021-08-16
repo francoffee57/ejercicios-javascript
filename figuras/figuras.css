@@ -1,0 +1,48 @@
+:root{
+	--purple: #FF67E7;
+	--blue: #0CECDD;
+	--yellow: #FFF338;
+	--black: #243042;
+	--white: #E2FFFC;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: var(--white);
+	color: var(--black);
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+/* Header--------------------------- */
+.header, .header__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header{
+	width: 100%;
+	height: 164px;
+	background-color: var(--yellow);
+}
+.header__container{
+	width: 80%;
+	height: 72px;
+	text-align: center;
+	background-color: var(--white);
+}
+.header__title{
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 24px;
+}
+.header__title--little{
+	display: block;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 12px;
+}
