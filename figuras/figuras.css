@@ -44,14 +44,14 @@ body{
 }
 .header__title{
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
 }
 .header__title--little{
 	display: block;
 	font-weight: normal;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 }
 /* Figuras del header */
 .header--figure--triangle{
@@ -141,7 +141,7 @@ body{
 	justify-content: space-around;
 	width: 80%;
 	max-width: 450px;
-	margin: 0 auto 22px;
+	margin: 0 auto 25px;
 }
 
 .square,
@@ -150,8 +150,8 @@ body{
 	border: 5px solid var(--black);
 }
 .square{
-	width: 5.7em;
-	height: 5.7em;
+	width: 6.7em;
+	height: 6.7em;
 	background-color: var(--blue);
 }
 .triangle__container{
@@ -159,8 +159,8 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 5em;
-	width: 5em;
+	height: 6em;
+	width: 6em;
 }
 .triangle,
 .triangle--shadow{
@@ -168,19 +168,19 @@ body{
 }
 .triangle{
 	z-index: 10;
-	width: 4.1em;
-	height: 4.1em;
+	width: 5.1em;
+	height: 5.1em;
 	margin-top: 5px;
 	background-color: var(--yellow);
 }
 .triangle--shadow{
-	width: 5em;
-	height: 5em;
+	width: 6em;
+	height: 6em;
 	background-color: var(--black);
 }
 .circle{
-	width: 5.5em;
-	height: 5.5em;
+	width: 6.5em;
+	height: 6.5em;
 	border-radius: 50%;
 	background-color: var(--purple);
 }
@@ -189,16 +189,16 @@ body{
 }
 .figure__title{
 	font-weight: bold;
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 3.6rem;
+	line-height: 3.6rem;
 	margin: 0 0 10px;
 }
 .figure__formula{
 	margin-left: 5px;
 	font-style: italic;
 	font-weight: normal;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 	opacity: 0.9;
 }
 /* formulario */
@@ -218,8 +218,8 @@ body{
 }
 .figure__form__label{
 	display: block;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 }
 .figure__form__input{
 	width: 100%;
@@ -239,8 +239,8 @@ body{
 .figure__form__button{
 	padding: 12px 33px;
 	font-weight: bold;
-	font-size: 13px;
-	line-height: 13px;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
 	border-radius: 10px;
 	border-color: transparent;
 	background-color: var(--yellow);
@@ -280,9 +280,25 @@ body{
 .footer__hecho-por{
 	width: 100%;
 	text-align: center;
-	font-size: 10px;
+	font-size: 1rem;
 }
 
 .footer--a:hover{
 	text-decoration:underline;
 }
+/* 
+@media (min-width: 100px){
+	.square{
+		width: 6.7em;
+		height: 6.7em;
+	}	
+	.triangle,
+	.triangle--shadow{
+		width: 5.1em;
+		height: 5.1em;
+	}
+	.circle{
+		width: 6.5em;
+		height: 6.5em;
+	}	
+} */
