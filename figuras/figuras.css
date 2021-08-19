@@ -136,9 +136,9 @@ body{
 }
 .figure__container__title{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 80%;
-	max-width: 600px;
+	max-width: 450px;
 	margin: 0 auto 22px;
 }
 
@@ -183,9 +183,6 @@ body{
 	border-radius: 50%;
 	background-color: var(--purple);
 }
-.figure__text_title__formula{
-	width: 65%;
-}
 .figure__title, .square,.figure__text_title__formula{
 	display: inline-block;
 }
@@ -229,6 +226,15 @@ body{
 	border-color: var(--purple);
 	background-color: transparent;
 }
+
+.button__container{
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 250px;
+}
+
+
 .figure__form__button{
 	padding: 12px 33px;
 	font-weight: bold;
@@ -242,3 +248,16 @@ body{
 	padding: 12px 16px;
 	background-color: var(--blue);
 }
+
+.figure__form__input--blue{
+	border-color: var(--blue);
+}
+.figure__form__input--yellow{
+	border-color: var(--yellow);
+}
+
+
+
+
+
+
