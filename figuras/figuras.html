@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./figuras.css">
     <title>Figuras Geométricas</title>
 </head>
@@ -34,7 +35,7 @@
                   
                 </div>
             </div>
-            <form class="figure__form" action="">
+            <form class="figure__form">
                 <label for="InputSquare" class="figure__form__label">
                     Escriba cuanto mide uno de los lados: 
                 </label>
@@ -63,7 +64,7 @@
                     <div class="triangle--shadow"></div>
                 </div>
             </div>
-            <form class="figure__form" action="">
+            <form class="figure__form">
                 <label for="InputTriangleL1" class="figure__form__label">
                     Escriba cuanto mide uno de los lados:
                 </label>
@@ -104,7 +105,7 @@
                     <p class="figure__formula">A = PI x r^2 <br> <br>P = 2 x PI x r </p>
                 </div>
             </div>
-            <form class="figure__form" action="">
+            <form class="figure__form">
                 <label for="InputCircle" class="figure__form__label">
                     Escriba cuanto mide el radio:
                 </label>
@@ -122,7 +123,22 @@
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__container__link">
+            <ul class="footer__link footer__link--left ">
+                <li class="footer__link__li"><a href="https://github.com/francoffee57/ejercicios-javascript/tree/main/figuras" class="footer--a"><span class="footer__icon icon--"><i class="fab fa-github"></i></span> Repositorio</a></li>
+                <li class="footer__link__li"><a href="https://twitter.com/francoffee57" class="footer--a"><samp class="footer__icon icon--"><i class="fab fa-twitter"></i></samp> Twitter</a></li>
+            </ul class="footer__link footer__link--">
+            <ul class="footer__link footer__link--right"> 
+                <li class="footer__link__li"><a href="https://www.linkedin.com/in/francoffee57/" class="footer--a"><samp class="footer__icon icon--"><i class="fab fa-linkedin"></i></samp> Linkedin</a></li>
+                <li class="footer__link__li"><a href="mailto:francoffee57@gmail.com" class="footer--a"><samp class="footer__icon icon--"><i class="fas fa-envelope"></i></samp> Correo</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__hecho-por">
+            <p class="footer__hecho-por__p">Hecho con &#128151; por <samp><a href="#" class="footer--a">@francoffee57</a></samp> </p>
+        </div>
+    </footer>
 
     <script src="./figuras.js"></script>
 </body>
