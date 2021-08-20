@@ -89,8 +89,8 @@ body{
 .header--circle-left{
 	width: 2.2em;
 	height: 2.2em;
-	right: 6%;
-	bottom: 12%;
+	right: 8%;
+	bottom: 15%;
 	background-color: var(--purple);
 	box-shadow: 0 0 0 6px var(--yellow);
 }
@@ -258,6 +258,21 @@ body{
 	border-color: var(--yellow);
 }
 
+/*Resultado  */
+.res__container{
+	padding-bottom: 2px;
+	font-size: 1.6rem;
+	border-bottom: 2px solid var(--purple);
+	color: var(--purple);
+}
+.res{
+	display: inline;
+	color: var(--black);
+}
+
+
+
+
 /* footer -------------------- */
 .footer{
 	width: 100%;
@@ -307,6 +322,7 @@ body{
 }
 .nav--square,
 .nav--circle{
+	background-color: var(--white);
 	border: 2px solid var(--black);
 }
 .nav--triangle{
@@ -329,12 +345,19 @@ body{
 .nav--circle{
 	border-radius: 50%;
 }
+
+
 .nav--opacity{
 	opacity: 1;
+	background-color: var(--black);
+	border-color: var(--white);
 }
-.nav--triangle:hover,
+
+
+.nav--triangle--shadow:hover,
 .nav--square:hover,
 .nav--circle:hover{
 	opacity: .99;
 	background-color: var(--black);
+	border-color: var(--white);
 }

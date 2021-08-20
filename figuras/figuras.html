@@ -30,15 +30,15 @@
         <aside class="nav">
             <nav class="nav__nav">
                 <ul class="nav__ul">
-                    <li class="nav__ul__li"><a href="" class="nav__figure nav--square"></a></li>
-                    <li class="nav__ul__li"><a href="" class="nav__figure nav--triangle"></a><samp class="nav--triangle nav--triangle--shadow"></samp></li>
-                    <li class="nav__ul__li"><a href="" class="nav__figure nav--circle"></a></li>
+                    <li class="nav__ul__li"><a href="#square" id="navSquare" class="nav__figure nav--square"></a></li>
+                    <li class="nav__ul__li"><a href="#triangle" id="navTriangle" class=" nav--triangle nav--triangle--shadow"></a><samp class="nav__figure nav--triangle "></samp></li>
+                    <li class="nav__ul__li"><a href="#circle" id="navCircle" class="nav__figure nav--circle"></a></li>
                 </ul>
             </nav>
         </aside>
 
         <!-- Square -->
-        <section class="figure">
+        <section id="square" class="figure">
             <div class="figure__container__title">
                 <div class="square"></div>
                 <div class="figure__text_title__formula">
@@ -61,12 +61,15 @@
                         Perímetro.
                     </button>
                 </div>
-                <p id="RestSquare">R: </p>
+                <div class="res__container">
+                    <span>R:  </span> 
+                    <p id="RestSquare" class="res"></p>
+                </div>
             </form>
         </section>
    
         <!-- Triangle -->
-        <section class="figure">
+        <section id="triangle" class="figure">
             <div class="figure__container__title">
                 <div class="figure__text_title__formula">
                     <h2 class="figure__title">Triángulo</h2>
@@ -111,7 +114,7 @@
         </section>
 
         <!-- Circle -->
-        <section class="figure">
+        <section id="circle" class="figure">
             <div class="figure__container__title">
                 <div class="circle"></div>
                 <div class="figure__text_title__formula">

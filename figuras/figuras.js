@@ -85,3 +85,47 @@ function calcularAreacirculo(){
     const RestCircle = document.getElementById("RestCircle")
     RestCircle.innerText = ariaCircle(value) + "unidades^2"
 }
+
+//nav
+const square = document.getElementById('square')
+const triangle = document.getElementById('triangle')
+const circle = document.getElementById('circle')
+
+const navSquare = document.getElementById('navSquare')
+const navTriangle = document.getElementById('navTriangle')
+const navCircle = document.getElementById('navCircle')
+
+window.addEventListener('scroll', ()=>{
+    
+    let locationSquare = square.getBoundingClientRect().top
+    let locationTriangle = triangle.getBoundingClientRect().top
+    let locationCircle = circle.getBoundingClientRect().bottom
+    console.log(locationCircle)
+
+    if(locationSquare <= 300 && locationSquare >= -20){
+        styles(navSquare, navTriangle, navCircle)
+    }
+    if(locationSquare <= -21 && locationTriangle >= -60){
+        styles(navTriangle, navSquare, navCircle)
+    }
+    if(locationTriangle <= -61 || locationCircle < 780){
+        styles(navCircle, navSquare, navTriangle)
+    }
+})
+
+
+const styles = (pon,quita1,quita2)=>{
+    if(pon.classList.contains('nav--opacity')){
+        if(quita1.classList.contains('nav--opacity')){
+            quita1.classList.remove('nav--opacity')
+        }
+        if(quita2.classList.contains('nav--opacity')){
+            quita2.classList.remove('nav--opacity')
+        }
+    }
+    else{
+        pon.classList.add('nav--opacity')
+    }
+}
+
+
