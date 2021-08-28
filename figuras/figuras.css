@@ -1,0 +1,361 @@
+:root{
+	--purple: #FF67E7;
+	--blue: #0CECDD;
+	--yellow: #FFF338;
+	--black: #243042;
+	--white: #E2FFFC;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+	font-family: 'Ubuntu Mono', monospace;
+}	
+body{
+	background-color: var(--white);
+	color: var(--black);
+}
+
+/* Header--------------------------- */
+.header, .header__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header{
+	width: 100%;
+	height: 164px;
+	position: relative;
+	margin-bottom: 28px;
+	background-color: var(--yellow);
+}
+.header__container{
+	width: 80%;
+	height: 72px;
+	position: relative;
+	z-index: 10;
+	margin-top: 8px;
+	text-align: center;
+	background-color: var(--white);
+}
+.header__title{
+	font-weight: bold;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+}
+.header__title--little{
+	display: block;
+	font-weight: normal;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+}
+/* Figuras del header */
+.header--figure--triangle{
+	height: 100%;
+	width: 60%;	
+	position: absolute;
+}
+.triangle--left,
+.triangle--right{
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.triangle--right{
+	left: 0;
+	background-color: var(--blue);
+}
+.triangle--left{
+	right: 0;
+	background-color: var(--purple);
+	transform:rotate(180deg);
+}
+.header--circle-right, .header--circle-left{
+	position: absolute;
+	z-index: 20;
+	border-radius: 50%;
+}
+.header--circle-right{
+	
+	width: 1.8em;
+	height: 1.8em;
+	left: 9%;
+	top: 14%;
+	background-color: var(--yellow);
+	box-shadow: -14px -14px 0 6px var(--purple);
+}
+.header--circle-left{
+	width: 2.2em;
+	height: 2.2em;
+	right: 8%;
+	bottom: 15%;
+	background-color: var(--purple);
+	box-shadow: 0 0 0 6px var(--yellow);
+}
+.triangle,
+.triangle--shadow,
+.header--triangle, 
+.header--triangle--shadow,
+.nav--triangle{
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.header--triangle, 
+.header--triangle--shadow{
+	position: absolute;
+	width: 2.3em;
+	height: 2em;
+}
+.header--triangle{
+	right: 23%;
+	top: 5px;
+	z-index: 10;
+	background-color: var(--blue);
+}
+.header--triangle--shadow{
+	right: calc(23% - 10px);
+	top: 10px;
+	background-color: var(--purple);
+}
+
+.header--rhombus{
+	position: absolute;
+	width: 1.3em;
+	height: 1.3em;
+	z-index: 20;
+	bottom: -8px;
+	left: -9px;
+	transform:rotate(45deg);
+	background-color: var(--blue);
+	border: 4px solid var(--yellow);
+	box-shadow: 0 0 0 4px var(--purple);
+}
+
+/* Main -------------------------- */
+.figure{
+	width: 100%;
+	margin-bottom: 65px;
+}
+.figure__container__title{
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	max-width: 450px;
+	margin: 0 auto 25px;
+}
+
+.square,
+.circle{
+	margin-right: 18px;
+	border: 5px solid var(--black);
+}
+.square{
+	width: 6.7em;
+	height: 6.7em;
+	background-color: var(--blue);
+}
+.triangle__container{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 6em;
+	width: 6em;
+}
+.triangle,
+.triangle--shadow{
+	position: absolute;
+}
+.triangle{
+	z-index: 10;
+	width: 5.1em;
+	height: 5.1em;
+	margin-top: 5px;
+	background-color: var(--yellow);
+}
+.triangle--shadow{
+	width: 6em;
+	height: 6em;
+	background-color: var(--black);
+}
+.circle{
+	width: 6.5em;
+	height: 6.5em;
+	border-radius: 50%;
+	background-color: var(--purple);
+}
+.figure__title, .square,.figure__text_title__formula{
+	display: inline-block;
+}
+.figure__title{
+	font-weight: bold;
+	font-size: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 0 10px;
+}
+.figure__formula{
+	margin-left: 5px;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	opacity: 0.9;
+}
+/* formulario */
+.figure__form{
+	width: 70%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.figure__form__input, 
+.figure__form__label,
+.figure__form__button{
+	margin-bottom: 22px;
+}
+.figure__form__input,
+.figure__form__button{
+	color: -internal-light-dark(var(--black), var(--white));
+}
+.figure__form__label{
+	display: block;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+}
+.figure__form__input{
+	width: 100%;
+	border-style:solid;
+	border-color: var(--purple);
+	background-color: transparent;
+}
+
+.button__container{
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 250px;
+}
+
+
+.figure__form__button{
+	padding: 12px 33px;
+	font-weight: bold;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	border-radius: 10px;
+	border-color: transparent;
+	background-color: var(--yellow);
+}
+.button--blue{
+	padding: 12px 16px;
+	background-color: var(--blue);
+}
+
+.figure__form__input--blue{
+	border-color: var(--blue);
+}
+.figure__form__input--yellow{
+	border-color: var(--yellow);
+}
+
+/*Resultado  */
+.res__container{
+	padding-bottom: 2px;
+	font-size: 1.6rem;
+	border-bottom: 2px solid var(--purple);
+	color: var(--purple);
+}
+.res{
+	display: inline;
+	color: var(--black);
+}
+
+
+/* footer -------------------- */
+.footer{
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+	background-color: var(--black);
+	color: var(--white);
+}
+.footer--a{
+	text-decoration: none;
+	color: var(--white);
+}
+.footer__container__link{
+	display: flex;
+	justify-content: space-around;
+	margin: 20px auto;
+}
+.footer__link__li,
+.nav__ul{
+	list-style-type:none;
+}
+.footer__hecho-por{
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+}
+.footer--a:hover{
+	text-decoration:underline;
+}
+
+
+/* NAV ------------------------- */
+.nav{
+	position: fixed;
+	bottom: 40px;
+	left: 20px;
+}
+.nav__ul{
+	position: relative;
+}
+.nav__figure{
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	margin-bottom: 10px;
+	opacity: .7;
+}
+.nav--square,
+.nav--circle{
+	background-color: var(--white);
+	border: 2px solid var(--black);
+} 
+.nav--triangle{
+	height: 25px;
+	width: 25px;
+	position: relative;
+	left: 0;
+	background-color: var(--black);
+}
+.nav--triangle--shadow{
+	display: inline-block;
+	position: absolute;
+	left: 2.5px;
+	top: 40px;
+	z-index: 10;
+	height: 20px;
+	width: 20px;
+	background-color: var(--white);
+}
+.nav--circle{
+	border-radius: 50%;
+}
+
+
+.nav--opacity{
+	opacity: 1;
+	background-color: var(--black);
+	border-color: var(--white);
+}
+
+
+.nav--triangle--shadow:hover,
+.nav--square:hover,
+.nav--circle:hover{
+	opacity: .99;
+	background-color: var(--black);
+	border-color: var(--white);
+}

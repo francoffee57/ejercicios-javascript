@@ -1,87 +1,168 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./figuras.css">
     <title>Figuras Geométricas</title>
 </head>
 <body>
-    <header>
-        <h1>Figuras Geométricas</h1>
+    <header class="header">
+        <div class="header--figure--triangle triangle--right" ></div>
+        <div class="header--circle-right"></div>
+        <div class="header--triangle"></div>
+        <div class="header--triangle--shadow"></div>
+        <div class="header__container">
+            <h1 class="header__title"><span class="header__title--little">Calculadora</span> Figuras Geométricas</h1>
+            <div class="header--rhombus"></div>
+        </div>
+        <div class="header--figure--triangle triangle--left"></div>
+        <div class="header--circle-left"></div>
     </header>
     
     <main>
-        <section clas="square">
-            <h2 class="square__title">Área y Perímetro del Cuadrado <samp></samp></h2>
-            <form class="square__form" action="">
-                <label for="InputSquare" class="square__form__label">
-                    Escriba cuanto mide uno de los lados:
+        <!-- NAV -->
+        <aside class="nav">
+            <nav class="nav__nav">
+                <ul class="nav__ul">
+                    <li class="nav__ul__li"><a href="#square" id="navSquare" class="nav__figure nav--square"></a></li>
+                    <li class="nav__ul__li"><a href="#triangle" id="navTriangle" class=" nav--triangle nav--triangle--shadow"></a><samp class="nav__figure nav--triangle "></samp></li>
+                    <li class="nav__ul__li"><a href="#circle" id="navCircle" class="nav__figure nav--circle"></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Square -->
+        <section id="square" class="figure">
+            <div class="figure__container__title">
+                <div class="square"></div>
+                <div class="figure__text_title__formula">
+                    <h2 class="figure__title">Cuadrado</h2>
+                    <p class="figure__formula">A = L x L <br> <br> P = L + L + L + L</p>
+                  
+                </div> 
+            </div>
+            <form class="figure__form">
+                <label for="InputSquare" class="figure__form__label">
+                    Escriba cuanto mide uno de los lados: 
                 </label>
-                <input id="InputSquare" type="number" class="square__form__input">
-                <button type="button" onclick="calcularPerimetroCuadrado()" class="square__form__button">
-                    Calcular Perímetro.
-                </button>
-                <button type="button" onclick="calcularAreaCuadrado()" class="square__form__button">
-                    Calcular Área.
-                </button>
-                <p id="RestSquare">R: </p>
+                <input id="InputSquare" type="number" class="figure__form__input" required>
+                
+                <div class="button__container">
+                    <button type="button" onclick="calcularAreaCuadrado()" class="figure__form__button">
+                        Área.
+                    </button>
+                    <button type="button" onclick="calcularPerimetroCuadrado()" class="figure__form__button button--blue">
+                        Perímetro.
+                    </button>
+                </div>
+                <div class="res__container">
+                    <span>R:  </span> 
+                    <p id="RestSquare" class="res"></p>
+                </div>
             </form>
         </section>
    
-        <section clas="triangle">
-            <h2 class="triangle__title">Área y Perímetro del Triángulo <samp></samp></h2>
-            <form class="triangle__form" action="">
-                <label for="InputTriangleL1" class="triangle__form__label">
+        <!-- Triangle -->
+        <section id="triangle" class="figure">
+            <div class="figure__container__title">
+                <div class="figure__text_title__formula">
+                    <h2 class="figure__title">Triángulo</h2>
+                    <p class="figure__formula">A = (B x H) / 2<br> <br>P = L + L + L + L</p>
+                </div>
+                <div class="triangle__container">
+                    <div class="triangle"></div>
+                    <div class="triangle--shadow"></div>
+                </div>
+            </div>
+            <form class="figure__form">
+                <label for="InputTriangleL1" class="figure__form__label">
                     Escriba cuanto mide uno de los lados:
                 </label>
-                <input id="InputTriangleL1" type="number" class="triangle__form__input">
+                <input id="InputTriangleL1" type="number" class="figure__form__input figure__form__input--blue" value="Necesario para el perímetro">
 
-                <label for="InputTriangleL2" class="triangle__form__label">
+                <label for="InputTriangleL2" class="figure__form__label" value="Necesario para el perímetro">
                     Escriba cuanto mide otro de sus lados:
                 </label>
-                <input id="InputTriangleL2" type="number" class="triangle__form__input">
+                <input id="InputTriangleL2" type="number" class="figure__form__input figure__form__input--blue">
                 
-                <label for="InputTriangleBase" class="triangle__form__label">
+                <label for="InputTriangleBase" class="figure__form__label" >
                     Escriba cuanto mide la base:
                 </label>
-                <input id="InputTriangleBase" type="number" class="triangle__form__input">
+                <input id="InputTriangleBase" type="number" required class="figure__form__input" required>
                 
-                <label for="InputTriangleHeight" class="triangle__form__label">
+                <label for="InputTriangleHeight" class="figure__form__label" value="Necesario para el área">
                     Escriba cuanto mide la altura:
                 </label>
-                <input id="InputTriangleHeight" type="number" class="triangle__form__input">
+                <input id="InputTriangleHeight" type="number" class="figure__form__input figure__form__input--yellow">
                 
-                <button type="button" onclick="calcularPerimetroTriangulo()" class="triangle__form__button">
-                    Calcular Perímetro.
-                </button>
-                <button type="button" onclick="calcularAreaTriangulo()" class="triangle__form__button">
-                    Calcular Área.
-                </button>
-                <p id="RestTriangle">R: </p>
+                <div class="button__container">
+                    <button type="button" onclick="calcularAreaTriangulo()" class="figure__form__button">
+                        Área.
+                    </button>
+                    <button type="button" onclick="calcularPerimetroTriangulo()" class="figure__form__button button--blue">
+                        Perímetro.
+                    </button>
+                </div>
+                <div class="res__container">
+                    <span>R:  </span> 
+                    <p id="RestTriangle" class="res"></p>
+                </div>    
             </form>
         </section>
 
-        <section clas="circle">
-            <h2 class="circle__title">Área y Perímetro del Círculo<samp></samp></h2>
-            <form class="circle__form" action="">
-                <label for="InputCircle" class="circle__form__label">
+        <!-- Circle -->
+        <section id="circle" class="figure">
+            <div class="figure__container__title">
+                <div class="circle"></div>
+                <div class="figure__text_title__formula">
+                    <h2 class="figure__title">Círculo</h2>
+                    <p class="figure__formula">A = PI x r^2 <br> <br>P = 2 x PI x r </p>
+                </div>
+            </div>
+            <form class="figure__form">
+                <label for="InputCircle" class="figure__form__label">
                     Escriba cuanto mide el radio:
                 </label>
-                <input id="InputCircle" type="number" class="circle__form__input">
-                <button type="button" onclick="calcularPerimetrocirculo()" class="circle__form__button">
-                    Calcular Perímetro.
-                </button>
-                <button type="button" onclick="calcularAreacirculo()" class="circle__form__button">
-                    Calcular Área.
-                </button>
-                <p id="RestCircle">R: </p>
+                <input id="InputCircle" type="number" class="figure__form__input" required>
+                <div class="button__container">  
+                    <button type="button" onclick="calcularAreacirculo()" class="figure__form__button">
+                        Área.
+                    </button>
+                    <button type="button" onclick="calcularPerimetrocirculo()" class="figure__form__button button--blue">
+                        Perímetro.
+                    </button>
+                </div>
+                <div class="res__container">
+                    <span>R:  </span> 
+                    <p id="RestCircle" class="res"></p>
+                </div>
+                
             </form>
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__container__link">
+            <ul class="footer__link footer__link--left ">
+                <li  class="footer__link__li"><a target="_blank" href="https://github.com/francoffee57/ejercicios-javascript/tree/main/figuras" class="footer--a"><span class="footer__icon icon--"><i class="fab fa-github"></i></span> Repositorio</a></li>
+                <li  class="footer__link__li"><a target="_blank" href="https://twitter.com/francoffee57" class="footer--a"><samp class="footer__icon icon--"><i class="fab fa-twitter"></i></samp> Twitter</a></li>
+            </ul class="footer__link footer__link--">
+            <ul class="footer__link footer__link--right"> 
+                <li  class="footer__link__li"><a target="_blank" href="https://www.linkedin.com/in/francoffee57/" class="footer--a"><samp class="footer__icon icon--"><i class="fab fa-linkedin"></i></samp> Linkedin</a></li>
+                <li  class="footer__link__li"><a target="_blank" href="mailto:francoffee57@gmail.com" class="footer--a"><samp class="footer__icon icon--"><i class="fas fa-envelope"></i></samp> Correo</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__hecho-por">
+            <p class="footer__hecho-por__p">Hecho con &#128151; por <samp><a href="#" class="footer--a">@francoffee57</a></samp> </p>
+        </div>
+    </footer>
 
     <script src="./figuras.js"></script>
 </body>
