@@ -6,6 +6,7 @@ const perimeterSquare= (square) =>{
 const ariaSquare= (square) =>{
     let aria = square ** 2
     return `El área del cuadrado es ${aria} `
+
 }
 
 //Callcular el Triangulo
@@ -29,7 +30,8 @@ const ariaCircle = (radio) =>{
     return `El área del círculo es: ${aria} `
 }
 
-//--Conexión con HTML
+//--Conexión con HTML---------------------------------------------------------
+
 //cuadrado
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputSquare")
@@ -58,7 +60,7 @@ function calcularPerimetroTriangulo(){
     const base = parseFloat(input3.value)
 
     const restTriangle = document.getElementById("RestTriangle")
-    restTriangle.innerText = perimeterTriangle(l1, l2, base) + "unidades"
+    restTriangle.innerText = perimeterTriangle(l1, l2, base) + "unidades" 
 }
 function calcularAreaTriangulo(){
     const input3 = document.getElementById("InputTriangleBase")
@@ -86,7 +88,7 @@ function calcularAreacirculo(){
     RestCircle.innerText = ariaCircle(value) + "unidades^2"
 }
 
-//nav
+//--nav ------------------------------------------------------------------------------------------
 const square = document.getElementById('square')
 const triangle = document.getElementById('triangle')
 const circle = document.getElementById('circle')
@@ -100,7 +102,6 @@ window.addEventListener('scroll', ()=>{
     let locationSquare = square.getBoundingClientRect().top
     let locationTriangle = triangle.getBoundingClientRect().top
     let locationCircle = circle.getBoundingClientRect().bottom
-    console.log(locationCircle)
 
     if(locationSquare <= 300 && locationSquare >= -20){
         styles(navSquare, navTriangle, navCircle)

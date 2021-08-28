@@ -271,8 +271,6 @@ body{
 }
 
 
-
-
 /* footer -------------------- */
 .footer{
 	width: 100%;
@@ -324,7 +322,7 @@ body{
 .nav--circle{
 	background-color: var(--white);
 	border: 2px solid var(--black);
-}
+} 
 .nav--triangle{
 	height: 25px;
 	width: 25px;
